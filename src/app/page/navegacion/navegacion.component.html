@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg bg-info ps-2">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ms-auto">
+          <!-- Enlace de Home -->
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" [routerLink]="['/home']">Home</a>
+          </li>
+  
+          <!-- Dropdown para "Tarea" -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="dropdownTarea" role="button" 
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Tareas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownTarea">
+              <li><a class="dropdown-item" [routerLink]="['/listadoTarea']">Ver tareas</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/crearTarea']">Crear tarea</a></li>
+            </ul>
+          </li>
+  
+          <!-- Dropdown para "Usuarios" -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="dropdownUsuarios" role="button" 
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Usuarios
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownUsuarios">
+                <li><a class="dropdown-item" href="#">Alta de usuario</a></li>
+              <li><a class="dropdown-item" href="#">Lista de usuarios</a></li>
+              <li><a class="dropdown-item" href="#">Agregar usuario</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
