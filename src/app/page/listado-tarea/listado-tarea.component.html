@@ -1,0 +1,50 @@
+<div class="container mt-4">
+  <div class="row">
+    <h3 class=text-center>{{titulo}}</h3>
+    @for (tarea of tareas; track tarea.id) {
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card h-100 shadow-sm card-color">
+        <div class="card-body">
+          @if (tarea.completada){
+          <div class="container mt-4 text-center img-fluid">
+            <img src="/image/descarga-removebg-preview.png" />
+          </div>
+          }
+          @else {
+          <div class="container mt-4 text-center img-fluid">
+            <img src="/image/abajo-removebg-preview.png" />
+          </div>
+          }
+          <h5 class="card-title text-center">{{ tarea.nombre | uppercase }}</h5>
+          <div class="p-3">
+            <div class="tamano_descripcion">
+              <p class="card-text">{{ tarea.descripcion }}</p>
+            </div>
+            <div class="tamano">
+              <p class="card-text"><strong>Fecha Finalización:</strong> {{ tarea.fecha | date: 'dd/MM/yyyy' }}</p>
+            </div>
+            <div class="tamano">
+              <p class="card-text"><strong>Prioridad:</strong> {{ tarea.prioridad }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+<!--
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let tarea of tareas">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ tarea.nombre }}</h5>
+            <p class="card-text">{{ tarea.descripcion }}</p>
+            <p class="card-text"><strong>Fecha:</strong> {{ tarea.fecha }}</p>
+            <p class="card-text"><strong>Prioridad:</strong> {{ tarea.prioridad }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->

@@ -1,0 +1,13 @@
+.card-color {
+    background-color: #e3f2fd; /* Azul claro */
+    border: 1px solid #90caf9; /* Azul más fuerte */
+}
+
+.btn-primary {
+    background-color: #1e88e5; /* Azul vibrante */
+    border-color: #1976d2;
+}
+.btn-primary:hover {
+    background-color: #1565c0;
+    border-color: #0d47a1;
+}

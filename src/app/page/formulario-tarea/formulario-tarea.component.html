@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card m-3 p-3 w-50 card-color">
+        <div class="d-flex justify-content-center mt-3">
+            <h2>Crear Tarea</h2>
+        </div>
+        <form [formGroup]="tareaForm" (ngSubmit)="getDataForm()">
+            <!-- Nombre -->
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" formControlName="nombre" id="nombre" placeholder="Ingrese el nombre de la tarea">
+            </div>
+
+            <!-- Descripción -->
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <textarea class="form-control" id="descripcion" rows="3" formControlName="descripcion" placeholder="Ingrese la descripción"></textarea>
+            </div>
+
+            <!-- Fecha -->
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" formControlName="fecha" id="fecha">
+            </div>
+
+            <!-- Prioridad -->
+            <div class="mb-3">
+                <label for="prioridad" class="form-label">Prioridad</label>
+                <select class="form-select" id="prioridad" formControlName="prioridad">
+                    <option value="alta">Alta</option>
+                    <option value="media">Media</option>
+                    <option value="baja">Baja</option>
+                </select>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Guardar Tarea</button>
+            </div>
+        </form>
+    </div>
+</div>
